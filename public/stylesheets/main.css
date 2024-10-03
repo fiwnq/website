@@ -1,8 +1,9 @@
 .bg {
   background: #12032b;
   color: rgb(237, 192, 255);
+  display: flex;
   justify-content: center;
-  margin-top: 50px;
+  padding-top: 50px;
 }
 
 .nav-custom {
