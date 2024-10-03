@@ -1,9 +1,8 @@
 .bg {
   background: #1a1522;
   color: rgb(237, 192, 255);
-  margin: 70px;
+  margin: 50%;
   height: 90px;
-  justify-content: center;
 }
 
 .nav-custom {
