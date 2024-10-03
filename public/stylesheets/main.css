@@ -1,11 +1,11 @@
 .bg {
-  background: #1a1522;
+  background: #12032b;
   color: rgb(237, 192, 255);
-  height: 100%;
+  justify-content: center;
+  margin-top: 50px;
 }
 
 .nav-custom {
-  padding-top: 20px;
-  background: #2e263b;
+  background: #181025;
   color: pink;
 }
