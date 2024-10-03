@@ -6,4 +6,6 @@ body {
 
 .navbar {
   margin-top: -20px;
+  background: #2e263b;
+  color: pink;
 }
