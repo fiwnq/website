@@ -1,7 +1,12 @@
-.bg {
+body {
   background: #1a1522;
   color: rgb(237, 192, 255);
-  padding-bottom: 80px;
+  margin: 70px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .nav-custom {
