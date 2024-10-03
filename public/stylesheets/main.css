@@ -4,7 +4,7 @@ body {
   padding-bottom: 80px;
 }
 
-#navbar {
+.nav-custom {
   margin-top: -20px;
   background: #2e263b;
   color: pink;
