@@ -1,8 +1,7 @@
 .bg {
   background: #1a1522;
   color: rgb(237, 192, 255);
-  margin: 50%;
-  height: 90px;
+  padding-bottom: 80px;
 }
 
 .nav-custom {
