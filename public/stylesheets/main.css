@@ -13,7 +13,6 @@ html, body {
   color: rgb(237, 192, 255);
   display: flex;
   justify-content: center;
-  align-items: center;
   height: 100%;
   padding-top: 50px;
   box-sizing: border-box;
@@ -46,13 +45,14 @@ a.custom-link:active {
 }
 
 button {
-  padding: 10px 20px;
+  padding: 10px 10px;
   font-size: 16px;
   background-color: #181025;
-  color: #fff;
+  color: rgb(237, 192, 255);
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  margin-right: 50px;
 }
 
 button:hover {
