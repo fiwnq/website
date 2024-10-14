@@ -26,3 +26,23 @@ html, body {
 h1 {
   font-size: 48px;
 }
+
+/* Normal unvisited link */
+a.custom-link {
+  color: rgb(237, 192, 255);
+}
+
+/* Visited link */
+a.custom-link:visited {
+  color: #FF69B4;
+}
+
+/* Mouse over link */
+a.custom-link:hover {
+  color: #be73db; 
+}
+
+/* Selected link */
+a.custom-link:active {
+  color: #DB7093; 
+}
