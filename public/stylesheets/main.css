@@ -1,3 +1,7 @@
+:root {
+  --fa-primary-color: rgb(237, 192, 255);
+}
+
 html, body {
   width: 100%;
   height: 100%;
@@ -15,5 +19,9 @@ html, body {
 
 .nav-custom {
   background: #181025;
-  color: pink;
+  color: rgb(237, 192, 255);
+}
+
+h1 {
+  font-size: 48px;
 }
