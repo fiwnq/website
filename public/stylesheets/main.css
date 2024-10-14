@@ -1,5 +1,6 @@
-:root {
+.icon {
   --fa-primary-color: rgb(237, 192, 255);
+  --fa-pull-margin: 5px;
 }
 
 html, body {
