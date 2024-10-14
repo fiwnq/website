@@ -1,6 +1,6 @@
 .icon {
   --fa-primary-color: rgb(237, 192, 255);
-  --fa-pull-margin: 5px;
+  --fa-pull-margin: 10px;
 }
 
 html, body {
@@ -13,6 +13,7 @@ html, body {
   color: rgb(237, 192, 255);
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 100%;
   padding-top: 50px;
   box-sizing: border-box;
@@ -27,22 +28,86 @@ h1 {
   font-size: 48px;
 }
 
-/* Normal unvisited link */
 a.custom-link {
   color: rgb(237, 192, 255);
+  --fa-pull-margin: 10px;
 }
 
-/* Visited link */
 a.custom-link:visited {
-  color: #FF69B4;
+  color: rgb(206, 172, 219);
 }
 
-/* Mouse over link */
 a.custom-link:hover {
-  color: #be73db; 
+  color: rgb(149, 110, 165); 
 }
 
-/* Selected link */
 a.custom-link:active {
-  color: #DB7093; 
+  color: rgb(237, 192, 255); 
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #181025;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #575d8e;
+}
+
+.popup-form {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(237, 192, 255);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+}
+
+input, textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid rgb(237, 192, 255);
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  background-color: #181025;
+  color: rgb(237, 192, 255);
+  border: none;
+  padding: 15px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover {
+  background-color: #575d8e;
+}
+
+.close {
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
