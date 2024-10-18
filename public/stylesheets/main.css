@@ -29,7 +29,7 @@ h1 {
 
 a.custom-link {
   color: rgb(237, 192, 255);
-  margin-left: 10px;
+  margin-left: 15px;
 }
 
 a.custom-link:visited {
@@ -114,5 +114,4 @@ input[type="submit"]:hover {
 
 .result {
   color: rgb(237, 192, 255);
-  font-size: calc(1.375rem + 1.5vw);
 }
