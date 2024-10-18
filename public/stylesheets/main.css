@@ -29,7 +29,7 @@ h1 {
 
 a.custom-link {
   color: rgb(237, 192, 255);
-  --fa-pull-margin: 10px;
+  margin: 20px;
 }
 
 a.custom-link:visited {
