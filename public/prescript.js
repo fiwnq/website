@@ -21,5 +21,5 @@ function calculateTimeDifference(startDate) {
 document.addEventListener("DOMContentLoaded", () => {
     const startDate = '2004-08-17';  // Set your start date here
     const { years, months, days } = calculateTimeDifference(startDate);
-    document.getElementById('result').innerText = `${years} years, ${months} months, and ${days} days`;
+    document.getElementById('result').innerText = `${years} years, ${months} months, and ${days} days old`;
 });

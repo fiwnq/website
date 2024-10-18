@@ -24,7 +24,7 @@ html, body {
 }
 
 h1 {
-  font-size: 96px;
+  font-size: calc(1.375rem + 1.5vw);
 }
 
 a.custom-link {
@@ -114,5 +114,5 @@ input[type="submit"]:hover {
 
 .result {
   color: rgb(237, 192, 255);
-  font-size: 96px;
+  font-size: calc(1.375rem + 1.5vw);
 }
