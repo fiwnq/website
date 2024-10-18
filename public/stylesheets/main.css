@@ -24,12 +24,12 @@ html, body {
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 96px;
 }
 
 a.custom-link {
   color: rgb(237, 192, 255);
-  margin: 20px;
+  margin-left: 10px;
 }
 
 a.custom-link:visited {
@@ -110,4 +110,9 @@ input[type="submit"]:hover {
   position: absolute;
   top: 10px;
   right: 10px;
+}
+
+.result {
+  color: rgb(237, 192, 255);
+  font-size: 96px;
 }
