@@ -1,6 +1,5 @@
 const express = require('express')
 const path = require('path')
-const fetch = require('node-fetch')
 const PORT = process.env.PORT || 5001
 
 const clientId = process.env.SPOTIFY_CLIENT_ID;
