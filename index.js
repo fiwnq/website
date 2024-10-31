@@ -26,4 +26,22 @@ express()
         res.status(500).send('Internal Server Error');
     }
   })
+  .get('/callback', function(req, res) {
+
+    var code = req.query.code || null;
+      var authOptions = {
+        url: 'https://accounts.spotify.com/api/token',
+        form: {
+          code: code,
+          redirect_uri: redirect_uri,
+          grant_type: 'authorization_code'
+        },
+        headers: {
+          'content-type': 'application/x-www-form-urlencoded',
+          'Authorization': 'Basic ' + (new Buffer.from(client_id + ':' + client_secret).toString('base64'))
+        },
+        json: true
+      };
+    }
+  )
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
