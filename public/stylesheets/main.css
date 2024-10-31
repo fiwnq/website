@@ -25,7 +25,11 @@ html, body {
 
 h1 {
   font-size: calc(1.375rem + 1.5vw);
-  padding-top: 50px;
+  padding-top: 69px;
+}
+
+h2 {
+  padding-bottom: 15px;
 }
 
 a.custom-link {
@@ -56,7 +60,7 @@ a.custom-link:active {
 }
 .button-container button {
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 18px;
   background-color: rgb(237, 192, 255);
   color: #12032b;
 }
