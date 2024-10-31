@@ -5,7 +5,6 @@
 
 html, body {
   width: 100%;
-  height: 100%;
   overflow: hidden;
   background: #12032b;
 }
@@ -16,6 +15,7 @@ html, body {
   display: flex;
   justify-content: center;
   box-sizing: border-box;
+  text-align: center;
 }
 
 .nav-custom {
@@ -25,7 +25,6 @@ html, body {
 
 h1 {
   font-size: calc(1.375rem + 1.5vw);
-  padding-top: 50px;
 }
 
 a.custom-link {
@@ -45,72 +44,19 @@ a.custom-link:active {
   color: rgb(237, 192, 255); 
 }
 
-button {
-  padding: 10px 10px;
-  font-size: 16px;
-  background-color: #181025;
-  color: rgb(237, 192, 255);
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-right: 50px;
-}
-
-button:hover {
-  background-color: #575d8e;
-}
-
-.popup-form {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgb(237, 192, 255);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 600px;
-}
-
-form {
+.button-container {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(237, 192, 255);
 }
-
-label {
-  margin-top: 10px;
+.button-container a {
+  text-decoration: none;
 }
-
-input, textarea {
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid rgb(237, 192, 255);
-  border-radius: 4px;
-}
-
-input[type="submit"] {
-  background-color: #181025;
-  color: rgb(237, 192, 255);
-  border: none;
-  padding: 15px;
-  margin-top: 20px;
-  cursor: pointer;
-  border-radius: 4px;
+.button-container button {
+  padding: 10px 20px;
   font-size: 16px;
-}
-
-input[type="submit"]:hover {
-  background-color: #575d8e;
-}
-
-.close {
-  font-size: 20px;
-  font-weight: bold;
-  cursor: pointer;
-  position: absolute;
-  top: 10px;
-  right: 10px;
 }
 
 .result {
