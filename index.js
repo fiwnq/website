@@ -8,4 +8,22 @@ express()
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
+  .get('/recently-played', async (req, res) => {
+    const accessToken = process.env.SPOTIFY_ACCESS_TOKEN;
+    try {
+        const response = await fetch('https://api.spotify.com/v1/me/player/recently-played?limit=10', {
+            headers: {
+                'Authorization': `Bearer ${accessToken}`
+            }
+        });
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        res.json(data);
+    } catch (error) {
+        console.error('Error fetching recently played tracks:', error);
+        res.status(500).send('Internal Server Error');
+    }
+  })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
