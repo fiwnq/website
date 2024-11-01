@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 5001
 const clientId = process.env.SPOTIFY_CLIENT_ID;
 const clientSecret = process.env.SPOTIFY_CLIENT_SECRET;
 const refreshToken = process.env.SPOTIFY_REFRESH_TOKEN;
-let accessToken = '';
+let accessToken = refreshToken;
 
 async function refreshAccessToken() {
   const authOptions = {
@@ -40,19 +40,19 @@ express()
 
     try {
       const response = await fetch('https://api.spotify.com/v1/me/player/recently-played?limit=10', {
-          headers: {
-              'Authorization': `Bearer ${accessToken}`
-          }
+        headers: {
+          'Authorization': `Bearer ${accessToken}`
+        }
       });
       if (!response.ok) {
-          throw new Error('Network response was not ok');
+        throw new Error('Network response was not ok');
       }
       const data = await response.json();
       res.json(data);
     } catch (error) {
-        console.error('Error fetching recently played tracks:', error);
-        res.status(500).send('Internal Server Error');
-      }
+      console.error('Error fetching recently played tracks:', error);
+      res.status(500).send('Internal Server Error');
+    }
   }) 
   .listen(PORT, () => { 
     console.log(`Listening on ${ PORT }`);
