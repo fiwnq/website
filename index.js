@@ -74,7 +74,7 @@ express()
       }));
   })
   
-  get('/callback', function(req, res) {
+  .get('/callback', function(req, res) {
 
     var code = req.query.code || null;
     var state = req.query.state || null;
