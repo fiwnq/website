@@ -23,8 +23,16 @@ async function refreshAccessToken() {
   try {
       const response = await fetch('https://accounts.spotify.com/api/token', authOptions);
       const data = await response.json();
-      accessToken = data.access_token;
-      console.log('Access token refreshed:', accessToken);
+      console.log(process.env.SPOTIFY_CLIENT_ID);
+      console.log(process.env.SPOTIFY_CLIENT_SECRET);
+      console.log(process.env.SPOTIFY_REFRESH_TOKEN);
+
+      if (response.ok) {
+            accessToken = data.access_token;
+            console.log('Access token refreshed:', accessToken);
+        } else {
+            console.error('Error refreshing access token:', data);
+        }
   } catch (error) {
       console.error('Error refreshing access token:', error);
   }
