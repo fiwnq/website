@@ -4,11 +4,12 @@ const PORT = process.env.PORT || 5001
 
 var client_id = process.env.SPOTIFY_CLIENT_ID;
 var client_secret = process.env.SPOTIFY_CLIENT_SECRET;
-
+var access_token = 'undefined';
+var refresh_token = 'undefined';
 var redirect_uri = 'https://jland.dev/callback';
 
 async function refreshAccessToken() {
-  var refresh_token = localStorage.getItem('access_token');
+  if(refresh_token == 'undefined') refresh_token = access_token;
   var authOptions = {
     url: 'https://accounts.spotify.com/api/token',
     headers: {
@@ -40,12 +41,12 @@ express()
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
   .get('/recently-played', async (req, res) => {
-    if (!accessToken) await refreshAccessToken();  // Ensure access token is available
+    if (access_token == 'undefined') await refreshAccessToken();  // Ensure access token is available
 
     try {
       const response = await fetch('https://api.spotify.com/v1/me/player/recently-played?limit=10', {
         headers: {
-          'Authorization': `Bearer ${accessToken}`
+          'Authorization': `Bearer ${access_token}`
         }
       });
       if (!response.ok) {
