@@ -1,6 +1,5 @@
 const express = require('express')
 const path = require('path')
-const request = require('request');
 const PORT = process.env.PORT || 5001
 
 /*var client_id = process.env.SPOTIFY_CLIENT_ID;
