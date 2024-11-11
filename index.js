@@ -1,8 +1,9 @@
 const express = require('express')
 const path = require('path')
+const request = require('request');
 const PORT = process.env.PORT || 5001
 
-var client_id = process.env.SPOTIFY_CLIENT_ID;
+/*var client_id = process.env.SPOTIFY_CLIENT_ID;
 var client_secret = process.env.SPOTIFY_CLIENT_SECRET;
 var access_token = 'undefined';
 var refresh_token = 'undefined';
@@ -34,13 +35,14 @@ async function refreshAccessToken() {
     }
   });
 }
-
+*/
 express()
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
-  .get('/recently-played', async (req, res) => {
+  .get('/projects', (req, res) => res.render('pages/projects'))
+  /*.get('/recently-played', async (req, res) => {
     if (access_token == 'undefined') await refreshAccessToken();  // Ensure access token is available
 
     try {
@@ -101,9 +103,9 @@ express()
       };
     }
   })
-
+*/
   .listen(PORT, () => { 
     console.log(`Listening on ${ PORT }`);
-    refreshAccessToken();
-    setInterval(refreshAccessToken, 3500 * 1000);
+    //refreshAccessToken();
+    //setInterval(refreshAccessToken, 3500 * 1000);
   })

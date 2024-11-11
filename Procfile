@@ -1,1 +1,1 @@
-web: npm start --experimental-webstorage
+web: npm start

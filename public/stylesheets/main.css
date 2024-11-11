@@ -54,7 +54,9 @@ a.custom-link:active {
   justify-content: center;
   align-items: center;
   background-color: #12032b;
+  gap: 15px;
 }
+
 .button-container a {
   text-decoration: none;
 }
